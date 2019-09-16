@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -47,12 +49,25 @@ public class Main {
             System.out.println( "you're a dev now !!");
         }
 
-        int A;
-        int B;
-        int C;
+        float D = 0.2f;
+        float CD = 0.5f;
+        String safe = "you can drive";
+        String molo = "go on easy bruh";
+        String yolo = " you only live once but prepare yourself to die MTF";
+        Scanner sc = new Scanner(System.in);
+    float TA = sc.nextFloat();
 
-        A = 50;
-        B = 100;
-        C
+
+        if ( TA < D ){
+           System.out.println(safe);
+        }
+        else {
+            if ( TA > D && TA < CD )
+            System.out.println(molo);
+            else {
+                System.out.println(yolo);
+            } else if (...)
+        }
+
     }
 }
