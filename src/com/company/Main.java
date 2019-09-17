@@ -106,7 +106,23 @@ public class Main {
             System.out.println(ip);
         }
 
-        //-------------------------bi
+        //-------------------------année bissextile----------------------
+
+        int annee=1900;
+
+        if (annee %4 == 0 && annee %100 ==0 && annee %400 != 0){
+            System.out.println("année bissextile !");
+        }else{
+            System.out.println("you shouldn't have this");
+        }
+
+        int jour=28;
+        int mois=12;
+        //int annee=2020;
+
+        String ab=" est une année bissextile";
+        String anb=" est une année non bissextile";
+
 
     }
 }
