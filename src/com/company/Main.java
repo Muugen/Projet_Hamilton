@@ -94,7 +94,7 @@ public class Main {
 
         //---------------------uti modulo x valeur paire ou impaire------------------
 
-        int v=12;
+        int v=2;
 
         String p="valeur paire";
         String ip="valeur impaire";
@@ -108,20 +108,33 @@ public class Main {
 
         //-------------------------année bissextile----------------------
 
-        int annee=1900;
-
-        if (annee %4 == 0 && annee %100 ==0 && annee %400 != 0){
-            System.out.println("année bissextile !");
-        }else{
-            System.out.println("you shouldn't have this");
-        }
-
-        int jour=28;
+        int jours=28;
         int mois=12;
-        //int annee=2020;
+        int annee=2000;
 
-        String ab=" est une année bissextile";
-        String anb=" est une année non bissextile";
+        String ab=(jours +"/"+ mois +"/"+ annee + " est bissextile");
+        String anb=(jours +"/"+ mois +"/"+ annee + " est bissextile");
+
+        if (mois >= 1 && mois <=12){
+            if ((mois %2 ==1 || mois==8) && jours >=1 && jours <=31) {
+                if (annee % 400 == 0 || (annee % 4 == 0 && annee % 100 != 0)) {
+                    System.out.println(ab);
+                } }
+            else if (mois % 2 == 0 && mois != 2 && jours >= 1 && jours <= 30) {
+                    if (annee % 400 == 0 || (annee % 4 == 0 && annee % 100 != 0)) {
+                        System.out.println(ab);
+                    } else if (annee % 400 == 0 || (annee % 4 == 0 && annee % 100 != 0)) {
+                        if (mois == 2 && jours == 29) {
+                            System.out.println(ab);
+                        }
+                    } else {
+                        System.out.println(anb);
+                    }
+                }
+
+
+
+        }
 
 
     }
